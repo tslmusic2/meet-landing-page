@@ -6,11 +6,15 @@ body {
         margin: 0;
         padding: 0;
         font-family: "Red Hat Display", sans-serif;
+        height: 100vh;
+        text-align: center;
 }
 
 :root {
+        --hoverblue: #71C0D4;
         --cyan300: #8FE3F9;
         --cyan600: #4D96A9;
+        --hoverpurple: #B18BDD;
         --purple300: #D9B8FF;
         --purple600: #855FB1;
         --slate300: #D1D1DF;
@@ -18,3 +22,165 @@ body {
         --slate900: #28283D;
         --white: #FAFAFA;
 }
+
+
+/* ===============
+       TYPOGRAPHY
+=================*/
+h1 {
+        color: var(--slate900);
+        font-size: 2.5rem;
+        font-weight: 900;
+}
+
+.description {
+        color: var(--slate600);
+        font-size: 1rem;;
+}
+
+.transition-art{
+        border: 1px solid var(--slate300);
+        border-radius: 50%;
+        color: var(--slate600);
+        font-weight: 700;
+        text-align: center;
+        width: 2em;
+        padding: .25em;
+}
+
+.line {
+        border: 1px solid var(--slate300);
+        height: 5em;
+}
+
+h2 { 
+        font-weight: 900;
+        color: var(--slate900);
+}
+
+p {
+        line-height: 1.6;
+}
+
+.bold-green {
+        color: var(--cyan600);
+        text-transform: uppercase;
+        font-size: .75rem;
+        font-weight: 900;
+        letter-spacing: 4px;
+        order: -1
+}
+
+.footer-head,
+.footer-description {
+        color: var(--white)
+}
+
+/*  Buttons */
+
+.btn {
+        color: var(--white);
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 1rem;
+        border-radius: 1.5em;
+        border: none;
+        cursor: pointer;
+}
+
+.btn-blue, .btn-purple {
+        padding: 1em 3em;
+}
+
+
+.btn-blue {
+        background: var(--cyan600);
+}
+
+.btn-purple {
+        background: var(--purple600);
+}
+
+.btn-span-hero {
+        color: var(--cyan300);
+}
+
+.btn-span-footer {
+        color: var(--purple300);
+}
+
+.btn-whatisit {
+        text-decoration: none;
+        padding: 1em 2.5em;
+        margin-top: 1em;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+        background-color: var(--hoverblue);
+}
+
+.btn-purple:hover,
+.btn-purple:focus {
+        background-color: var(--hoverpurple);
+}
+
+/* ===============
+                LAYOUT
+=================*/
+img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+}
+
+header {
+        height: 5em;
+}
+
+.hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.logo-img {
+}
+
+.main-content-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+        padding: 2em
+}
+
+.main-content-images * {
+        border-radius: 10px;
+}
+
+.main-content {
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+}
+
+.desktop-hero-img {
+        display: none;
+}
+
+.art-section {
+        padding: 2em;
+}
+
+footer {
+        background-color: var(--cyan600);
+        background-image: url(assets/tablet/image-footer.jpg);
+        background-position: top;
+        background-size: cover;
+        padding: 2em;
+}
+
+/* ===============
+       MEDIA QUERY
+=================*/
