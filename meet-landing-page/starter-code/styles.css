@@ -80,6 +80,8 @@ p {
 .footer-head,
 .footer-description {
         color: var(--white);
+        max-width: 35em;
+        margin: .75em auto;
 }
 
 /*  Buttons */
@@ -168,18 +170,21 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: 33em;
         margin: 0 auto;
+        max-width: 37em;
 }
 
 .main-hero {
         margin: 2em auto;
+        max-width: 73em;
 }
 
 .main-content-images {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1em;
+        max-width: 73em;
+        margin: 0 auto;
 }
 
 .main-content-images * {
@@ -189,6 +194,8 @@ header {
 .main-content {
         display: flex;
         flex-direction: column;
+        max-width: 35em;
+        margin: 0 auto;
 }
 
 .desktop-hero-img {
@@ -196,10 +203,11 @@ header {
 }
 
 footer {
-        background-image: url(assets/tablet/image-footer.jpg);
-        background-position: top;
+        background-image: linear-gradient(#4D96A9E6, #4D96A9E6), url(assets/tablet/image-footer.jpg);
+        background-position: center;
         background-size: cover;
         background-color: var(--cyan600);
+        
 }
 
 /* ===============
@@ -216,7 +224,7 @@ footer {
         }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 51em) {
         footer {
                 display: flex;
                 justify-content: space-around;
@@ -233,22 +241,35 @@ footer {
 
         .main-hero {
                 display: flex;
-                justify-content: space-between;
-                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                gap: 2em;
+                margin: 0 auto;
         }
+
         .hero-img {
                 display: none;
         }
 
         .desktop-hero-img {
-                display: flex;
+                display: block;
                 object-fit: cover;
                 max-width: 100%;
-               border: 2px solid green;
+                flex: 1 1 30em;
+                min-width: 21em;
+                
+        }
+
+        .desktop-hero-img-left {
+                align-self: center;
+        }
+
+        .desktop-hero-img-right {
+                align-self: end;
         }
 
         .hero-text {
-                margin: 0 2em;
+                flex: 1 1 28em;
         }
 
 }
